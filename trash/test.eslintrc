@@ -1,0 +1,23 @@
+{
+  "extends": ".eslintrc",
+  "plugins": [
+    "jasmine"
+  ],
+  "rules": {
+    "quotes": 0
+  },
+  "env": {
+  },
+  "globals": {
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false,
+    "describe": false,
+    "it": false,
+    "expect": false,
+    "sinon": false,
+    "exports": true,
+    "inject": false
+  }
+}
