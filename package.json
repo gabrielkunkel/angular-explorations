@@ -1,7 +1,7 @@
 {
   "name": "angular-explorations",
   "version": "1.0.0",
-  "description": "A timer to help you be productive.",
+  "description": "An ever-growing application to explore all things Angular.",
   "main": "dist/index.js",
   "scripts": {
     "env": "env",
