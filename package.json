@@ -1,17 +1,17 @@
 {
-  "name": "gk-pomodoro-application",
+  "name": "angular-explorations",
   "version": "1.0.0",
   "description": "A timer to help you be productive.",
   "main": "dist/index.js",
   "scripts": {
-    "env" : "env",
+    "env": "env",
     "start": "NODE_ENV=development webpack-dev-server --content-base src/ --port 8090 --colors --progress --watch",
     "build": "NODE_ENV=production webpack --progress --colors && cp src/index.html dist/",
     "test": "NODE_ENV=test COVERAGE=true ./node_modules/.bin/karma start --single-run"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gabrielkunkel/not-uploaded-yet"
+    "url": "https://github.com/gabrielkunkel/angular-explorations.git"
   },
   "keywords": [
     "pomodoro",

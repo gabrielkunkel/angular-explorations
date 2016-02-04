@@ -130,12 +130,6 @@ describe("The Timer", function() {
       expect(ctrl.displayTime).toBe('1:00:00');
     }); // end it
 
-    it("should alter the currentTime when the sessionLength changes, while it is paused", function() {
-
-
-    }); // end it
-
-
 
   }); // end describe clockface controller
 

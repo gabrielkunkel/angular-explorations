@@ -45,6 +45,15 @@ function timerServiceFunction ($interval) {
     }
   }
 
+  service.format = function (time) {
+    if (time >= 3600000) {
+      return 'h:mm:ss'
+    }
+    else if (time < 3600000) {
+      return 'mm:ss'
+    }
+  }
+
   return service;
 }
 
