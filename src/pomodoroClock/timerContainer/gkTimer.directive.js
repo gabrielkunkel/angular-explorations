@@ -1,5 +1,5 @@
 module.exports = angular.module('app')
-  .directive('gkTimerDirective', function () {
+  .directive('gkPomodoroClockDirective', function () {
     return {
       restrict: 'EA',
       scope: {

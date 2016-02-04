@@ -13,7 +13,7 @@ angular.module('app', [])
 
 //////////// Require Application Indices /////////////////////
 require('./factories')
-require('./timer')
+require('./pomodoroClock')
 
 //////////// Require CSS /////////////////////////////////////
 require('./main.css')

@@ -1,4 +1,4 @@
-describe("The timer factory", function() {
+describe("The pomodoroClock factory", function() {
   var timer, $interval, canceledCheck, originalCurrent
 
 

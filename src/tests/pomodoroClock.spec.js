@@ -1,7 +1,7 @@
 /* eslint no-console: 0 */
 /* eslint angular/log: 0 */
 
-describe("The Timer", function() {
+describe("The Pomodoro Clock", function() {
 
   describe("Main Component Directive", function() {
     var scope, rootScope, compile, $element, directive, timer,
@@ -14,7 +14,7 @@ describe("The Timer", function() {
       rootScope = $rootScope
       compile = $compile
       scope = rootScope.$new()
-      directive = angular.element('<gk-timer-directive></gk-timer-directive>')
+      directive = angular.element('<gk-pomodoro-clock-directive></gk-pomodoro-clock-directive>')
       $element = compile(directive)(scope)
       scope.$digest()
 
@@ -27,7 +27,7 @@ describe("The Timer", function() {
     }); // end it
 
     it("includes the 'clockface' directive template", function() {
-      var clockface = $element.find('.timer-clockface')
+      var clockface = $element.find('.pomodoroClock-clockface')
       expect($element.html()).toContain("inner");
     }); // end it
     

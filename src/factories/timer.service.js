@@ -1,3 +1,5 @@
+(function () {
+
 function timerServiceFunction ($interval) {
   var canceled, canceledCheck, service = {}
 
@@ -59,3 +61,5 @@ function timerServiceFunction ($interval) {
 
 module.exports = angular.module('app')
     .factory('timerService', timerServiceFunction)
+
+})();
