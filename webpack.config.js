@@ -106,7 +106,7 @@ function getJavaScriptLoaders() {
     return [
       {
         test: /\.(test|mock|spec)\.js$/, // include only mock and test files
-        loaders: ['ng-annotate', 'babel-loader?presets[]=es2015&cacheDirectory', 'eslint'],
+        loaders: ['babel-loader?presets[]=es2015&cacheDirectory', 'eslint'],
         exclude: exclude
       },
       {

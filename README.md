@@ -9,6 +9,9 @@ the process. It is not intended to be pretty, but the testing coverage should be
 
 ### Things I'd Love To Do Next
 
-- Add testing with Protractor
-- Add routes for different sized micro-projects
-- Add some Angular 2
+- Test with Protractor
+- Add routes
+- Add Angular 2 components
+- Create a service that just returns an anonymous function, perhaps with a "configuration object"
+- Run karma with multiple browsers
+-  
