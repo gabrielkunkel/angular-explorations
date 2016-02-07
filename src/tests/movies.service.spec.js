@@ -33,6 +33,25 @@ describe("omdb service", function () {
 
     expect(response.data).toEqual(movieData);
   }); // end it
+
+  it("should error correctly", function() {
+    var response = [];
+
+    $httpBackend.when('GET', 'http://www.omdbapi.com/?v=1&s=the%20phantom%20menace')
+      .respond(500, movieData);
+
+    moviesService.search('the phantom menace')
+      .then(function onSuccess(data) {
+        response = data;
+      })
+      .catch(function () {
+        response = "Error!";
+      });
+
+    $httpBackend.flush();
+
+    expect(response).toEqual("Error!");
+  }); // end it
   
   it("should return movie search data from the Id", function() {
     var response = [];

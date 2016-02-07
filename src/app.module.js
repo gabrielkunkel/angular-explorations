@@ -9,7 +9,10 @@ if (process.env.NODE_ENV === 'development') {
 
 //////////// Initialize Angular //////////////////////////////
 var angular = require('angular')
-angular.module('app', [])
+require('angular-resource')
+angular.module('app', [
+  'ngResource'
+])
 
 //////////// Require Application Indices /////////////////////
 require('./factories')

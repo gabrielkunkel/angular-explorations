@@ -23,6 +23,7 @@
   "//": "Technically this should be totally overlooked, because it's a comment.",
   "devDependencies": {
     "angular-mocks": "^1.4.8",
+    "angular-resource": "^1.5.0",
     "babel-core": "^6.3.15",
     "babel-eslint": "^4.1.6",
     "babel-loader": "*",

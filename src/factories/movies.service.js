@@ -13,20 +13,24 @@
       this.$q = $q;
       this.$http = $http;
       this.baseUrl = 'http://www.omdbapi.com/?v=1&';
-    }
 
-    /**
-     * @param {String} setting
-     * @param {String} query
-     * @returns {Function}
-     */
-    MoviesService.prototype.httpProcess = function (setting, query) {
-      var deferred = this.$q.defer();
-      this.$http.get(this.baseUrl + setting + encodeURIComponent(query))
-        .then(function (data) {
-          deferred.resolve(data);
-        });
-      return deferred.promise;
+      /**
+       * @param {String} setting
+       * @param {String} query
+       * @returns {Function}
+       */
+      this.httpPromise = function (setting, query) {
+        var deferred = this.$q.defer();
+        this.$http.get(this.baseUrl + setting + encodeURIComponent(query))
+          .then(function (data) {
+            deferred.resolve(data);
+          }, function onReject() {
+            deferred.reject();
+          });
+
+        return deferred.promise;
+      }
+
     }
 
     /**
@@ -35,7 +39,7 @@
      * @returns {Function}
      */
     MoviesService.prototype.search = function (query) {
-      return this.httpProcess("s=", query);
+      return this.httpPromise("s=", query);
     }
 
     /**
@@ -44,7 +48,7 @@
      * @returns {Function}
      */
     MoviesService.prototype.findById = function (query) {
-      return this.httpProcess("i=", query);
+      return this.httpPromise("i=", query);
 
     }
 

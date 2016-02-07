@@ -1,6 +1,7 @@
 # Angular Explorations
 
-- Pomodoro Timer
+- Pomodoro Timer (component-style, $interval)
+- Movie List Add ($resource, $http, $httpBackend)
 
 ### Application Design
 
